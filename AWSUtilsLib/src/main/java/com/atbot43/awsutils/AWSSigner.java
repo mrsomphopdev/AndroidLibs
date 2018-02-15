@@ -15,7 +15,7 @@ import okhttp3.Request;
  */
 
 //@Keep
-public class Signer {
+public class AWSSigner {
 
     public static Request signRequestV4(@NonNull Request request,
                                         @NonNull AWSClientConfigs configs) throws IOException {

@@ -24,7 +24,7 @@ public class AWSSigningRequestV4Interceptor implements Interceptor {
     @Override
     public Response intercept(@NonNull Chain chain) throws IOException {
 
-        Request signedRequest = Signer.signRequestV4(chain.request(),configs);
+        Request signedRequest = AWSSigner.signRequestV4(chain.request(),configs);
         return chain.proceed(signedRequest);
     }
 }

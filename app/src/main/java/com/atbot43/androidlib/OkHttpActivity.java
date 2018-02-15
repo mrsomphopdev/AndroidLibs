@@ -40,7 +40,7 @@ public class OkHttpActivity extends AppCompatActivity {
                 .url(requestUrl)
                 .build();
 
-        Request signedRequest = Signer.signRequestV4(request, configs);
+        Request signedRequest = AWSSigner.signRequestV4(request, configs);
 
         OkHttpClient client = new OkHttpClient.Builder()
                 .connectTimeout(10, TimeUnit.SECONDS)

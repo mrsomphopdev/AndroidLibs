@@ -8,7 +8,7 @@ import com.amazonaws.auth.BasicAWSCredentials;
  * Created by mrdevxus on 2/9/18.
  */
 
-public class AWSBasicCredentialsProvider implements AWSCredentialsProvider {
+class AWSBasicCredentialsProvider implements AWSCredentialsProvider {
 
     private String accessKey;
     private String secretKey;
@@ -35,6 +35,4 @@ public class AWSBasicCredentialsProvider implements AWSCredentialsProvider {
     public void refresh() {
 
     }
-
-
 }

@@ -20,6 +20,6 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 
--keep class com.atbot43.awsutils.Signer {public *;}
+-keep class com.atbot43.awsutils.AWSSigner {public *;}
 -keep class com.atbot43.awsutils.AWSClientConfigs {public *;}
 -keep class com.atbot43.awsutils.AWSSigningRequestV4Interceptor {public *;}

@@ -5,8 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 import com.atbot43.awsutils.AWSClientConfigs;
+import com.atbot43.awsutils.AWSSigner;
 import com.atbot43.awsutils.AWSSigningRequestV4Interceptor;
-import com.atbot43.awsutils.Signer;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
@@ -37,7 +37,7 @@ public class RetrofitActivity extends AppCompatActivity {
     private void requestWithRetrofit() {
         AWSClientConfigs configs = new AWSClientConfigs(accessKey, secretKey, apiKey);
 
-        AWSSigningRequestV4Interceptor awsInterceptor = Signer.signingRequestV4Interceptor(configs);
+        AWSSigningRequestV4Interceptor awsInterceptor = AWSSigner.signingRequestV4Interceptor(configs);
 
         HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
         logging.setLevel(HttpLoggingInterceptor.Level.BODY);
